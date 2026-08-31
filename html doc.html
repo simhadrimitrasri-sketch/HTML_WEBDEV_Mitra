@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect | Student Startup</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0b1020;
+            color: white;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #11182d;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #ff7a18;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ff7a18;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #10182f, #17284a);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ff7a18;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #cbd2e1;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #ff7a18;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ff9b4a;
+            transform: scale(1.05);
+        }
+
+        .hero-card {
+            width: 320px;
+            padding: 40px;
+            border-radius: 25px;
+            background: #1d2945;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .hero-card h2 {
+            color: #ff7a18;
+            margin-bottom: 15px;
+        }
+
+        /* Features */
+        .features {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #151e35;
+            padding: 30px 20px;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #202d4b;
+        }
+
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #b9c2d4;
+            line-height: 1.5;
+        }
+
+        /* How it works */
+        .steps {
+            padding: 70px 8%;
+            background: #11182d;
+            text-align: center;
+        }
+
+        .steps h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .step-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .step {
+            width: 220px;
+            padding: 25px;
+            border: 1px solid #33415f;
+            border-radius: 15px;
+        }
+
+        .number {
+            font-size: 35px;
+            color: #ff7a18;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #080c17;
+            color: #aaa;
+        }
+
+        /* Mobile */
+        @media(max-width: 800px) {
+            .hero {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .step-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">CampusConnect 🚀</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#steps">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>Build. Connect. <span>Innovate.</span></h1>
+
+            <p>
+                CampusConnect is a student-powered platform that
+                connects talented students, exciting projects,
+                hackathons and opportunities in one place.
+            </p>
+
+            <a href="#features" class="btn">
+                Explore CampusConnect →
+            </a>
+
+        </div>
+
+        <div class="hero-card">
+            <h2>🚀 Student Startup</h2>
+            <p>
+                Turning student ideas into real-world solutions.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="features" id="features">
+
+        <h2>What We Offer</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">👥</div>
+                <h3>Find Teammates</h3>
+                <p>
+                    Connect with students who share your interests
+                    and skills.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💡</div>
+                <h3>Projects</h3>
+                <p>
+                    Discover innovative projects and turn ideas
+                    into reality.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏆</div>
+                <h3>Hackathons</h3>
+                <p>
+                    Find upcoming competitions and build something
+                    amazing.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <h3>Resources</h3>
+                <p>
+                    Access useful learning materials and opportunities.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="steps" id="steps">
+
+        <h2>How It Works</h2>
+
+        <div class="step-container">
+
+            <div class="step">
+                <div class="number">01</div>
+                <h3>Sign Up</h3>
+                <p>Create your student profile.</p>
+            </div>
+
+            <div class="step">
+                <div class="number">02</div>
+                <h3>Explore</h3>
+                <p>Find projects and opportunities.</p>
+            </div>
+
+            <div class="step">
+                <div class="number">03</div>
+                <h3>Connect</h3>
+                <p>Meet students and form teams.</p>
+            </div>
+
+            <div class="step">
+                <div class="number">04</div>
+                <h3>Build</h3>
+                <p>Turn your idea into a solution.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer id="contact">
+        © 2026 CampusConnect | Built by Students, For Students 🚀
+    </footer>
+
+</body>
+</html>

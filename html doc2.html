@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusMate | Student Startup</title>
+
+    <style>
+
+        /* ================= BASIC ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080b14;
+            color: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: #080b14;
+            border-bottom: 1px solid #252b3a;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #7c5cff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul a {
+            color: #b5bdcc;
+            font-size: 14px;
+        }
+
+        nav ul a:hover {
+            color: #7c5cff;
+        }
+
+        .nav-btn {
+            background: #7c5cff;
+            padding: 10px 18px;
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            max-width: 1200px;
+            min-height: 650px;
+            margin: auto;
+            padding: 80px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 70px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            color: #9a87ff;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #7c5cff;
+        }
+
+        .hero p {
+            color: #969fb1;
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            margin-top: 25px;
+            padding: 14px 25px;
+
+            background: #7c5cff;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #9583ff;
+        }
+
+
+        /* ================= DASHBOARD ================= */
+
+        .dashboard {
+            width: 350px;
+
+            padding: 25px;
+
+            background: #121827;
+
+            border: 1px solid #30384c;
+
+            border-radius: 20px;
+
+            box-shadow: 0 25px 70px rgba(0,0,0,.4);
+        }
+
+        .dashboard-top {
+            display: flex;
+            justify-content: space-between;
+
+            padding-bottom: 18px;
+
+            border-bottom: 1px solid #293143;
+
+            font-size: 13px;
+        }
+
+        .online {
+            color: #55d98b;
+            font-size: 11px;
+        }
+
+        .welcome {
+            padding: 25px 0;
+        }
+
+        .welcome p {
+            color: #777f91;
+            font-size: 12px;
+        }
+
+        .welcome h3 {
+            margin-top: 5px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .dash-card {
+            padding: 18px;
+
+            background: #0d121e;
+
+            border: 1px solid #252d3f;
+
+            border-radius: 12px;
+        }
+
+        .dash-card .emoji {
+            font-size: 25px;
+        }
+
+        .dash-card strong {
+            display: block;
+            font-size: 22px;
+            margin-top: 8px;
+        }
+
+        .dash-card small {
+            color: #788294;
+        }
+
+        .dashboard-bottom {
+            margin-top: 15px;
+
+            padding: 15px;
+
+            background: #191f2e;
+
+            border-radius: 10px;
+
+            color: #b8c0ce;
+
+            font-size: 12px;
+        }
+
+
+        /* ================= SECTIONS ================= */
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 90px 30px;
+
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .section h2 span {
+            color: #7c5cff;
+        }
+
+        .section-intro {
+            max-width: 650px;
+            margin: auto;
+
+            color: #8e98aa;
+        }
+
+
+        /* ================= PROBLEM ================= */
+
+        .problem-grid {
+            margin-top: 45px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px;
+
+            background: #101521;
+
+            border: 1px solid #252d3e;
+
+            border-radius: 15px;
+
+            text-align: left;
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #7c5cff;
+        }
+
+        .card-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #818b9e;
+            font-size: 13px;
+        }
+
+
+        /* ================= SOLUTION ================= */
+
+        .solution {
+            padding: 90px 8%;
+
+            background: #101521;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 100px;
+        }
+
+        .solution-text {
+            max-width: 500px;
+        }
+
+        .solution-text h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .solution-text h2 span {
+            color: #7c5cff;
+        }
+
+        .solution-text p {
+            color: #8c96a8;
+        }
+
+        .check {
+            margin-top: 20px;
+            line-height: 2;
+            color: #c5cbd6;
+            list-style: none;
+        }
+
+        .check li::first-letter {
+            color: #7c5cff;
+        }
+
+
+        /* ================= SOLUTION BOX ================= */
+
+        .solution-box {
+            width: 300px;
+            height: 300px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background: #171d30;
+
+            border: 1px solid #51469b;
+
+            border-radius: 25px;
+
+            position: relative;
+        }
+
+        .solution-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .solution-box h3 {
+            font-size: 25px;
+        }
+
+        .solution-box p {
+            color: #818b9d;
+            font-size: 12px;
+        }
+
+
+        /* ================= FEATURES ================= */
+
+        .features {
+            margin-top: 45px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 28px;
+
+            background: #101521;
+
+            border: 1px solid #252d3e;
+
+            border-radius: 15px;
+
+            text-align: left;
+
+            transition: .3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-7px);
+            border-color: #7c5cff;
+        }
+
+        .feature-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #818b9e;
+            font-size: 13px;
+        }
+
+        .feature a {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            color: #8d7aff;
+
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* ================= HOW IT WORKS ================= */
+
+        .how {
+            padding: 90px 8%;
+
+            background: #101521;
+
+            text-align: center;
+        }
+
+        .steps {
+            max-width: 1000px;
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+        .step {
+            padding: 25px;
+        }
+
+        .number {
+            width: 60px;
+            height: 60px;
+
+            margin: auto auto 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #29204f;
+
+            border: 1px solid #6356bb;
+
+            border-radius: 50%;
+
+            color: #9b8aff;
+
+            font-weight: bold;
+        }
+
+        .step p {
+            color: #818b9d;
+            font-size: 13px;
+        }
+
+
+        /* ================= TEAM ================= */
+
+        .team {
+            max-width: 600px;
+
+            margin: 40px auto 0;
+
+            padding: 35px;
+
+            background: #101521;
+
+            border: 1px solid #293143;
+
+            border-radius: 18px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+
+            margin: auto auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #211b42;
+
+            border: 1px solid #5b4eaa;
+
+            border-radius: 50%;
+
+            font-size: 45px;
+        }
+
+        .team p {
+            color: #818b9d;
+            font-size: 13px;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .cta {
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #251d50,
+                    #080b14 65%
+                );
+        }
+
+        .cta h2 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .cta h2 span {
+            color: #7c5cff;
+        }
+
+        .cta p {
+            color: #8d97a8;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 45px 20px;
+
+            background: #05070c;
+
+            text-align: center;
+
+            border-top: 1px solid #1d2330;
+        }
+
+        footer p {
+            margin-top: 10px;
+
+            color: #6f7889;
+
+            font-size: 12px;
+        }
+
+        footer small {
+            display: block;
+
+            margin-top: 20px;
+
+            color: #555e6e;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+
+                text-align: center;
+
+                padding-top: 60px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .dashboard {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .problem-grid,
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .solution {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 550px) {
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .problem-grid,
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 32px;
+            }
+
+            .solution {
+                padding: 70px 20px;
+            }
+
+            .solution-text h2 {
+                font-size: 35px;
+            }
+
+            .solution-box {
+                width: 240px;
+                height: 240px;
+            }
+
+            .cta h2 {
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+                Campus<span>Mate</span>
+            </a>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-btn">
+                Join Us
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                🚀 STUDENT STARTUP
+            </span>
+
+            <h1>
+                One Campus.<br>
+                <span>One Platform.</span>
+            </h1>
+
+            <p>
+                CampusMate brings study resources, campus events,
+                clubs and important updates together in one simple
+                platform built especially for students.
+            </p>
+
+            <a href="#features" class="btn">
+                Explore CampusMate →
+            </a>
+
+        </div>
+
+
+        <!-- Dashboard -->
+
+        <div class="dashboard">
+
+            <div class="dashboard-top">
+                <strong>CampusMate</strong>
+
+                <span class="online">
+                    ● Online
+                </span>
+            </div>
+
+            <div class="welcome">
+
+                <p>Good morning 👋</p>
+
+                <h3>
+                    Welcome, Student!
+                </h3>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <div class="dash-card">
+                    <div class="emoji">📚</div>
+                    <strong>24</strong>
+                    <small>Resources</small>
+                </div>
+
+                <div class="dash-card">
+                    <div class="emoji">📅</div>
+                    <strong>08</strong>
+                    <small>Events</small>
+                </div>
+
+                <div class="dash-card">
+                    <div class="emoji">🎯</div>
+                    <strong>12</strong>
+                    <small>Clubs</small>
+                </div>
+
+                <div class="dash-card">
+                    <div class="emoji">📢</div>
+                    <strong>05</strong>
+                    <small>Updates</small>
+                </div>
+
+            </div>
+
+            <div class="dashboard-bottom">
+                ✨ Everything students need — all in one place.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROBLEM ================= -->
+
+    <section id="problem" class="section">
+
+        <span class="tag">
+            THE PROBLEM
+        </span>
+
+        <h2>
+            Student life shouldn't<br>
+            <span>be this complicated.</span>
+        </h2>
+
+        <p class="section-intro">
+            Students often use different platforms to find study
+            resources, campus events and important information.
+        </p>
+
+
+        <div class="problem-grid">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Scattered Resources
+                </h3>
+
+                <p>
+                    Notes and study materials are spread across
+                    different groups and platforms.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📢
+                </div>
+
+                <h3>
+                    Missed Updates
+                </h3>
+
+                <p>
+                    Important announcements, deadlines and events
+                    can easily be missed.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Hidden Opportunities
+                </h3>
+
+                <p>
+                    Students may not know about clubs, competitions
+                    and activities available on campus.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOLUTION ================= -->
+
+    <section id="solution" class="solution">
+
+        <div class="solution-text">
+
+            <span class="tag">
+                OUR SOLUTION
+            </span>
+
+            <h2>
+                Meet <span>CampusMate.</span>
+            </h2>
+
+            <p>
+                A student-first platform that brings everything
+                happening on campus into one simple place.
+            </p>
+
+            <ul class="check">
+
+                <li>✓ Easy to use</li>
+                <li>✓ Made for students</li>
+                <li>✓ Everything in one place</li>
+                <li>✓ Simple and accessible</li>
+
+            </ul>
+
+            <a href="#features" class="btn">
+                Discover Features →
+            </a>
+
+        </div>
+
+
+        <div class="solution-box">
+
+            <div class="solution-icon">
+                🎓
+            </div>
+
+            <h3>
+                CampusMate
+            </h3>
+
+            <p>
+                Connecting students.<br>
+                Simplifying campus life.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section id="features" class="section">
+
+        <span class="tag">
+            OUR FEATURES
+        </span>
+
+        <h2>
+            Everything students need.
+        </h2>
+
+        <p class="section-intro">
+            Useful tools and information designed to make
+            student life easier.
+        </p>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Study Resources
+                </h3>
+
+                <p>
+                    Find notes, study materials and useful
+                    academic resources quickly.
+                </p>
+
+                <a href="#">
+                    Learn more →
+                </a>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📅
+                </div>
+
+                <h3>
+                    Campus Events
+                </h3>
+
+                <p>
+                    Discover workshops, competitions, seminars
+                    and college events.
+                </p>
+
+                <a href="#">
+                    Learn more →
+                </a>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Clubs & Activities
+                </h3>
+
+                <p>
+                    Explore clubs and activities that match
+                    your interests.
+                </p>
+
+                <a href="#">
+                    Learn more →
+                </a>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
